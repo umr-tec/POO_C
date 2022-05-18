@@ -1,0 +1,7 @@
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\bin\Debug\POOU2C_EJemplo1_.exe.config
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\bin\Debug\POOU2C_EJemplo1_.exe
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\bin\Debug\POOU2C_EJemplo1_.pdb
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\obj\Debug\POOU2C_EJemplo1_.csproj.AssemblyReference.cache
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\obj\Debug\POOU2C_EJemplo1_.csproj.CoreCompileInputs.cache
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\obj\Debug\POOU2C_EJemplo1_.exe
+C:\Users\ulise\source\repos\POOU2C_EJemplo1_\obj\Debug\POOU2C_EJemplo1_.pdb
