@@ -236,8 +236,36 @@ namespace POOU2C_EJemplo1_
             return valorDeRetorno;
         }
 
+        //Sobrecarga
+        public virtual void DetallesDePago()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            int promedio;
+            Console.WriteLine("Ingresa el último promedio del alumnmo");
+            promedio = Convert.ToInt32( Console.ReadLine());
+
+            string valorDeRetorno;
+
+            //valorDeRetorno = "Datos de Pago: \n" +  "Matricula: " 
+            //    +  matricula +" \n "+  "Nombre: " + nombre + primerAllido 
+            //    +" \n"+ "Total a pagar: " + CalcularPagoInscripcion(90) 
+            //    +"\n"+ "Becado: "  ;            
+
+            if (promedio >= 80)
+            {
+                valorDeRetorno = string.Format("Datos de Pago: \n Matricula: {0} \n Nombre: {1} " +
+                "\n Total a pagar: {2} \n Becado: SI",
+                matricula, nombre, CalcularPagoInscripcion(promedio));
+            }
+            else
+            {
+                valorDeRetorno = string.Format("Datos de Pago: \n Matricula: {0} \n Nombre: {1} " +
+                "\n Total a pagar: {2} \n Becado: NO",
+                matricula, nombre, CalcularPagoInscripcion(promedio));
+            }
+            //imrpime el resultado            
+            Console.WriteLine(valorDeRetorno);
+        }
         #endregion
-
-
     }
 }
