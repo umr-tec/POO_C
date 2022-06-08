@@ -266,6 +266,29 @@ namespace POOU2C_EJemplo1_
             //imrpime el resultado            
             Console.WriteLine(valorDeRetorno);
         }
+
+
+        //Metodo con arreglos
+        public void PromedioMateria() {
+            string nombreMateria;
+            int contador = 0;
+            int[] calificacionesPorUnidad = new int[6];
+            Console.WriteLine("Método para calcular el promedio de una asignatua");
+            Console.WriteLine("Ingresa el nombre de la asignatura");
+            nombreMateria = Console.ReadLine();
+
+            foreach (int resultados in calificacionesPorUnidad)
+            {
+                Console.WriteLine("Ingresa la calificacion");
+                calificacionesPorUnidad[contador] = Convert.ToInt32( Console.ReadLine());
+                contador++;
+            }
+
+            Console.WriteLine("El promedio de la asignatura {0} ", nombreMateria);
+
+        }
+
+
         #endregion
     }
 }

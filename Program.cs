@@ -9,9 +9,10 @@ namespace POOU2C_EJemplo1_
     class Program
     {
         public static void PersonalizaConsola() {
-            Console.Clear();
+            
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
             Console.WriteLine("\n");
             Console.WriteLine("RegistraTEC");
             Console.WriteLine("\n");
@@ -94,20 +95,55 @@ namespace POOU2C_EJemplo1_
 
             fechaInscripcion = DateTime.Now;
 
-            ////Instanciar el objeto
-            //Alumno objeto1 = new Alumno(nombre, primerAllido, segundoApellido, curp, fechaNacimiento, fechaInscripcion);
-            //Console.WriteLine("\n");
-
-            //Console.WriteLine(objeto1.MuestraInformacionDelAlumno());
-            //Console.WriteLine("Alumno inscrito exitosamente...");
-
 
             Sistemas alumnoSistemas = new Sistemas('C', 2, nombre, primerAllido, segundoApellido, curp, fechaNacimiento, fechaInscripcion);
             alumnoSistemas.DetallesDePago();
+            alumnoSistemas.PromedioMateria();
 
 
-            // Alumno objetoEduardo = new Alumno("Eeduardo","Gonzalez","Lozano","GLOE041201HCLRDL06", Convert.ToDateTime( "01-12-2004 00:00:00"), Convert.ToDateTime("01-07-2021 00:00:00"));
-            // //objetoEduardo.Matricula = "211000132";
+
+            //Arreglos Uniodimensionales
+            Console.WriteLine("Uso de arreglos");
+            Console.WriteLine("\n");
+            //Declarar un arreglo
+            string[] alumnos2C = new string[11];
+            alumnos2C[0] = "Daniel";
+            alumnos2C[1] = "Cuahutemoc";
+            alumnos2C[2] = "Omar";
+            alumnos2C[3] = "Erika";
+            alumnos2C[4] = "Jesse";
+            alumnos2C[5] = "Miguel";
+            alumnos2C[6] = "Eduardo";
+            alumnos2C[7] = "Nairobi";
+            alumnos2C[8] = "Valeria";
+            alumnos2C[9] = "Daniela";
+
+            //REcorrer arreglos
+            //for (int i = 0; i <= 10; i++)
+            //{
+            //    Console.WriteLine(alumnos2C[i]);
+            //}
+           
+            //Segunda opcion de recorrer el arreglo
+            foreach (string resultado in alumnos2C)
+            {
+               
+                Console.WriteLine(resultado);
+                
+            }
+
+
+            //Console.WriteLine(alumnos2C[0]);
+            //Console.WriteLine(alumnos2C[1]);
+            //Console.WriteLine(alumnos2C[2]);
+            //Console.WriteLine(alumnos2C[3]);
+            //Console.WriteLine(alumnos2C[4]);
+            //Console.WriteLine(alumnos2C[5]);
+            //Console.WriteLine(alumnos2C[6]);
+            //Console.WriteLine(alumnos2C[7]);
+            //Console.WriteLine(alumnos2C[8]);
+            //Console.WriteLine(alumnos2C[9]);
+
             Console.ReadKey();
         }
     }
