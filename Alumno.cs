@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Libreria para poder crar archuvod de texto
+using System.IO;
+
 namespace POOU2C_EJemplo1_
 {
     class Alumno
@@ -18,6 +21,8 @@ namespace POOU2C_EJemplo1_
         private char tipoSangre;
         //Miembro de tipo constante
         const string NUMERO_TECNOLIGICO = "100";
+        string nombreMateria;
+        int  promedio = 0;
 
         #endregion
 
@@ -270,30 +275,60 @@ namespace POOU2C_EJemplo1_
 
         //Metodo con arreglos
         public void PromedioMateria() {
-            string nombreMateria;
-            int contador = 0, promedio = 0;
+            string nombreMateria;           
             int[] calificacionesPorUnidad = new int[6];
             Console.WriteLine("Método para calcular el promedio de una asignatua");
             Console.WriteLine("Ingresa el nombre de la asignatura");
             nombreMateria = Console.ReadLine();
 
-            foreach (int resultados in calificacionesPorUnidad)
+            //foreach (int resultados in calificacionesPorUnidad)
+            //{
+            //    Console.WriteLine("Ingresa la calificacion");
+            //    calificacionesPorUnidad[contador] = Convert.ToInt32( Console.ReadLine());
+            //    contador++;
+            //}
+
+            //FOR
+            for (int i = 0; i < 6; i++)
             {
-                Console.WriteLine("Ingresa la calificacion");
-                calificacionesPorUnidad[contador] = Convert.ToInt32( Console.ReadLine());
-                contador++;
+                Console.WriteLine("Ingresa la calificacion de la unidad número {0}",i+1);
+                calificacionesPorUnidad[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            //leeer el arreglo
+            //leer el arreglo
             foreach (int promedioCalculado in calificacionesPorUnidad)
             {
                 promedio += promedioCalculado;
             }
 
-            Console.WriteLine("El promedio de la asignatura {0} es {1}", nombreMateria, promedio/6);
-
+            Console.WriteLine("El promedio de la asignatura {0} es {1}", nombreMateria, promedio/6);            
         }
 
+
+        //Metodo para crar un archivo de texto con la inforamcion delc urso
+        public void CrearArchivo(string nombreArchivo) {
+
+            //La libreria IO, contierne una clase llamada FileStraem
+            //Filestraem: trabajar con archivos de texto (crear)
+            using (FileStream fileStream = new FileStream(nombreArchivo, FileMode.Create))
+            {
+                using (StreamWriter streamWriter = new StreamWriter(fileStream, Encoding.UTF8))
+                {
+                    streamWriter.WriteLine("Sistema de evaluación TEc");
+                    streamWriter.WriteLine("Detalles del alumno: {0}", nombre +" "+ primerAllido);
+                    streamWriter.WriteLine("Calificaciones de la asignatura: {0}", nombreMateria);
+                    streamWriter.WriteLine("El promedio de la asignatura es: {0}", promedio);
+                    if (promedio >= 70)
+                    {
+                        streamWriter.WriteLine("ACREDITADO");
+                    }
+                    else
+                    {
+                        streamWriter.WriteLine("NO ACREDITADO");
+                    }
+                }
+            }
+        }
 
         #endregion
     }

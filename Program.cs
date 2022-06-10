@@ -97,40 +97,40 @@ namespace POOU2C_EJemplo1_
 
 
             Sistemas alumnoSistemas = new Sistemas('C', 2, nombre, primerAllido, segundoApellido, curp, fechaNacimiento, fechaInscripcion);
-            alumnoSistemas.DetallesDePago();
+          //  alumnoSistemas.DetallesDePago();
             alumnoSistemas.PromedioMateria();
-
+            alumnoSistemas.CrearArchivo(nombre);
 
 
             //Arreglos Uniodimensionales
-            Console.WriteLine("Uso de arreglos");
-            Console.WriteLine("\n");
-            //Declarar un arreglo
-            string[] alumnos2C = new string[11];
-            alumnos2C[0] = "Daniel";
-            alumnos2C[1] = "Cuahutemoc";
-            alumnos2C[2] = "Omar";
-            alumnos2C[3] = "Erika";
-            alumnos2C[4] = "Jesse";
-            alumnos2C[5] = "Miguel";
-            alumnos2C[6] = "Eduardo";
-            alumnos2C[7] = "Nairobi";
-            alumnos2C[8] = "Valeria";
-            alumnos2C[9] = "Daniela";
+            //Console.WriteLine("Uso de arreglos");
+            //Console.WriteLine("\n");
+            ////Declarar un arreglo
+            //string[] alumnos2C = new string[11];
+            //alumnos2C[0] = "Daniel";
+            //alumnos2C[1] = "Cuahutemoc";
+            //alumnos2C[2] = "Omar";
+            //alumnos2C[3] = "Erika";
+            //alumnos2C[4] = "Jesse";
+            //alumnos2C[5] = "Miguel";
+            //alumnos2C[6] = "Eduardo";
+            //alumnos2C[7] = "Nairobi";
+            //alumnos2C[8] = "Valeria";
+            //alumnos2C[9] = "Daniela";
 
-            //REcorrer arreglos
-            //for (int i = 0; i <= 10; i++)
-            //{
-            //    Console.WriteLine(alumnos2C[i]);
-            //}
+            ////REcorrer arreglos
+            ////for (int i = 0; i <= 10; i++)
+            ////{
+            ////    Console.WriteLine(alumnos2C[i]);
+            ////}
            
-            //Segunda opcion de recorrer el arreglo
-            foreach (string resultado in alumnos2C)
-            {
+            ////Segunda opcion de recorrer el arreglo
+            //foreach (string resultado in alumnos2C)
+            //{
                
-                Console.WriteLine(resultado);
+            //    Console.WriteLine(resultado);
                 
-            }
+            //}
 
 
             //Console.WriteLine(alumnos2C[0]);
